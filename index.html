@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time's Tech PVT LTD - Innovative Tech Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="./img/fav.png">
+
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    // Colors based on your logo
+                    colors: {
+                        'brand-dark': '#0A2B4C', // Dark Navy/Blue from text
+                        'brand-accent': '#00AEEF', // Bright Blue from icon
+                    },
+                    // Font to match modern tech feel
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+
+    </script>
+
+    <style>
+        /* Small style for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* #logo {
+            width: 150px;
+            height: 150px;
+        } */
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-900 bg-white">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 w-full bg-white/95 shadow-sm backdrop-blur-md">
+        <nav class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <a href="#" title="Time's Tech Home" class="flex-shrink-0">
+                    <!-- Using your provided logo path -->
+                    <img id="logo" class="h-12 w-auto" src="./img/logo.jpg" alt="Time's Tech PVT LTD Logo">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="#home" class="font-medium text-gray-600 hover:text-brand-accent transition-colors">Home</a>
+                    <a href="#services"
+                        class="font-medium text-gray-600 hover:text-brand-accent transition-colors">Services</a>
+                    <a href="#projects"
+                        class="font-medium text-gray-600 hover:text-brand-accent transition-colors">Projects</a>
+                    <a href="#about"
+                        class="font-medium text-gray-600 hover:text-brand-accent transition-colors">About</a>
+                    <a href="#contact"
+                        class="inline-flex items-center justify-center px-5 py-2 border border-transparent text-base font-medium rounded-md text-white bg-brand-accent hover:bg-opacity-90 transition-colors">
+                        Contact
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-accent"
+                        aria-label="Main menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Menu Icon (Hamburger) -->
+                        <svg id="menu-icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <!-- Close Icon (X) -->
+                        <svg id="menu-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 inset-x-0 bg-white shadow-lg z-40">
+            <div class="pt-2 pb-4 space-y-1">
+                <a href="#home"
+                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-brand-accent hover:text-gray-800">Home</a>
+                <a href="#services"
+                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-brand-accent hover:text-gray-800">Services</a>
+                <a href="#projects"
+                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-brand-accent hover:text-gray-800">Projects</a>
+                <a href="#about"
+                    class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-brand-accent hover:text-gray-800">About</a>
+                <a href="#contact"
+                    class="block w-full text-left pl-3 pr-4 py-3 border-l-4 border-transparent text-base font-medium text-white bg-brand-accent hover:bg-opacity-90">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="relative bg-gray-50 pt-16 pb-24 sm:pt-24 sm:pb-32">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight text-brand-dark sm:text-5xl md:text-6xl">
+                    <span class="block xl:inline">Innovative Solutions for</span>
+                    <span class="block text-brand-accent xl:inline"> a Digital World</span>
+                </h1>
+                <p class="mt-3 max-w-md mx-auto text-base text-gray-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    Time's Tech PVT LTD crafts cutting-edge software, AI models, and web experiences to propel your
+                    business forward.
+                </p>
+                <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+                    <div class="rounded-md shadow">
+                        <a href="#services"
+                            class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-accent hover:bg-opacity-90 transition-colors md:py-4 md:text-lg md:px-10">
+                            Our Services
+                        </a>
+                    </div>
+                    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                        <a href="#projects"
+                            class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-brand-accent bg-white hover:bg-gray-50 transition-colors md:py-4 md:text-lg md:px-10">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 sm:py-24 bg-white">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-base font-semibold text-brand-accent uppercase tracking-wide">Our Services</h2>
+                    <p class="mt-2 text-3xl font-extrabold text-brand-dark tracking-tight sm:text-4xl">
+                        What We Do
+                    </p>
+                </div>
+
+                <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+                    <!-- Service 1: AI Solutions -->
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+                        <div class="flex-shrink-0">
+                            <!-- Icon: CPU / AI -->
+                            <svg class="h-8 w-8 text-brand-accent" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                <rect x="9" y="9" width="6" height="6"></rect>
+                                <line x1="9" y1="1" x2="9" y2="4"></line>
+                                <line x1="15" y1="1" x2="15" y2="4"></line>
+                                <line x1="9" y1="20" x2="9" y2="23"></line>
+                                <line x1="15" y1="20" x2="15" y2="23"></line>
+                                <line x1="20" y1="9" x2="23" y2="9"></line>
+                                <line x1="20" y1="14" x2="23" y2="14"></line>
+                                <line x1="1" y1="9" x2="4" y2="9"></line>
+                                <line x1="1" y1="14" x2="4" y2="14"></line>
+                            </svg>
+                        </div>
+                        <h3 class="mt-4 text-xl font-bold text-brand-dark">AI & ML Solutions</h3>
+                        <p class="mt-2 text-base text-gray-600">
+                            We build and deploy custom artificial intelligence models, like 'Arivu AI', to solve complex
+                            business challenges and automate processes.
+                        </p>
+                    </div>
+
+                    <!-- Service 2: Web Development -->
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+                        <div class="flex-shrink-0">
+                            <!-- Icon: Code -->
+                            <svg class="h-8 w-8 text-brand-accent" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="mt-4 text-xl font-bold text-brand-dark">Web Development</h3>
+                        <p class="mt-2 text-base text-gray-600">
+                            From dynamic corporate websites to complex web applications, we deliver responsive,
+                            high-performance digital experiences.
+                        </p>
+                    </div>
+
+                    <!-- Service 3: Mobile Apps -->
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+                        <div class="flex-shrink-0">
+                            <!-- Icon: Smartphone -->
+                            <svg class="h-8 w-8 text-brand-accent" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="mt-4 text-xl font-bold text-brand-dark">Mobile App Development</h3>
+                        <p class="mt-2 text-base text-gray-600">
+                            Creating seamless and engaging native and cross-platform mobile apps for both iOS and
+                            Android platforms.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Project Section -->
+        <section id="projects" class="py-16 sm:py-24 bg-brand-dark text-white">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+                    <div>
+                        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl text-white">
+                            Featured Project: Arivu AI
+                        </h2>
+                        <p class="mt-4 text-lg text-gray-300">
+                            'Arivu AI' is our flagship project, a testament to our capabilities in machine learning and
+                            intelligent application design. It showcases our commitment to building smart, scalable, and
+                            user-centric technology.
+                        </p>
+                        <div class="mt-8">
+                            <a href="https://arivuai.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-brand-dark bg-brand-accent hover:bg-opacity-90 transition-colors">
+                                View Arivu AI Project
+                                <svg class="-mr-1 ml-3 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                    fill="currentColor" aria-hidden="true">
+                                    <path
+                                        d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 001.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z">
+                                    </path>
+                                    <path
+                                        d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-10 lg:mt-0">
+                        <!-- Placeholder image for the project -->
+                        <img class="rounded-lg shadow-xl" src="./img/logo2.jpeg" alt="Arivu AI Project Showcase">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 sm:py-24 bg-white overflow-hidden">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center"> <!-- MODIFIED: Replaced grid with centered layout -->
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-brand-dark tracking-tight sm:text-4xl">
+                            About Time's Tech
+                        </h2>
+                        <p class="mt-4 text-lg text-gray-600">
+                            We are a passionate team of innovators, designers, and engineers dedicated to turning bold
+                            ideas into reality. Our mission is to leverage technology to create meaningful impact and
+                            value for our clients.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            At Time's Tech, we believe in collaboration, transparency, and excellence. We work closely
+                            with you to understand your vision and deliver solutions that exceed expectations.
+                        </p>
+                    </div>
+                    <!-- The div containing the placeholder image has been removed -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-400">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-4">
+                    <img class="h-10" src="./img/logo.jpg" alt="Time's Tech PVT LTD Logo">
+                    <p class="text-gray-400 text-base">
+                        Crafting the future of technology, one project at a time.
+                    </p>
+                    <div class="flex space-x-6">
+                        <!-- Instagram Link -->
+                        <a style="width: 50px;height: 50px;" href="https://www.instagram.com/times_tech_02/"
+                            target="_blank" rel="noopener noreferrer"> <i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <!-- Footer nav links (can be expanded) -->
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Solutions</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li><a href="#services" class="text-base text-gray-400 hover:text-white">AI & ML</a>
+                                </li>
+                                <li><a href="#services" class="text-base text-gray-400 hover:text-white">Web
+                                        Development</a></li>
+                                <li><a href="#services" class="text-base text-gray-400 hover:text-white">Mobile Apps</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Company</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li><a href="#about" class="text-base text-gray-400 hover:text-white">About Us</a></li>
+                                <li><a href="#projects" class="text-base text-gray-400 hover:text-white">Projects</a>
+                                </li>
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Legal</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Privacy Policy</a></li>
+                                <li><a href="#" class="text-base text-gray-400 hover:text-white">Terms of Service</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer Bar -->
+            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+                <p class="text-base text-gray-400 md:order-1">
+                    &copy; 2025 Time's Tech PVT LTD. All rights reserved.
+                </p>
+                <p class="mt-4 text-base text-gray-400 md:mt-0 md:order-2">
+                    Crafted by Mani
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIconOpen = document.getElementById('menu-icon-open');
+            const menuIconClose = document.getElementById('menu-icon-close');
+
+            // Function to toggle menu
+            const toggleMenu = () => {
+                const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+                menuBtn.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+                menuIconOpen.classList.toggle('hidden');
+                menuIconClose.classList.toggle('hidden');
+            };
+
+            // Toggle menu on button click
+            menuBtn.addEventListener('click', toggleMenu);
+
+            // Close menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
